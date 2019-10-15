@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 //import any components needed
 
 //Import your array data to from the provided data file
+import { operators } from '../../../data';
 
 const Operators = () => {
+  // console.log(operators);
   // STEP 2 - add the imported data to state
+  const [operatorArr] = useState(operators);
+  console.log(operatorArr);
   return (
     <div>
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
@@ -14,3 +18,5 @@ const Operators = () => {
     </div>
   );
 };
+
+export default Operators;
