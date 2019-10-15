@@ -14,9 +14,13 @@ const Operators = () => {
   return (
     <div>
       {
+        //This was a little bit of a challenge because of how the data was set up.
         operatorArr.map((obj,i) => {
+          //I first mapped through the received array, which was an array of objects
+          //I assigned obj for each object and i to assign a key
           
           let objData = Object.values(obj);
+          //I pulled the values out of the objects and assigned them the same values as prop names.
           console.log(objData);
 
           return <OperatorButton key={i} char={objData[0]} val = {objData[1]} />
