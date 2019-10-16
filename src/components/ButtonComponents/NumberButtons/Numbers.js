@@ -8,10 +8,10 @@ import { numbers } from '../../../data'
 */
 //Import your array data to from the provided data file
 
-const Numbers = () => {
-  console.log(numbers);
+const Numbers = (props) => {
+  // console.log(numbers);
   const [numberArr] = useState(numbers)
-  console.log(numberArr);
+  // console.log(numberArr);
   // STEP 2 - add the imported data to state
   
   return (
@@ -24,8 +24,8 @@ const Numbers = () => {
 
        {
          numberArr.map((num, i) => {
-           console.log(num);
-           return <NumberButton key = {i} num={num}/>
+          //  console.log(num);
+           return <NumberButton addToTotal = {() =>props.addToTotal(num)} key = {i} num={num}/>
          })
          
        }

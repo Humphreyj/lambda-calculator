@@ -1,10 +1,19 @@
 .container {
     background-color: #c00025;
-    width: 100%;
+    width: 99.9%;
     max-width: 550px;
     border-radius: 15px;
     border: 2px solid grey;
     padding-bottom: 25px;
+    margin: 0 auto;
+}
+.App {
+   
+}
+
+.btn {
+    border-radius: 50%;
+    padding: 2% 3%;
 }
 .display {
     margin-top: 25px;

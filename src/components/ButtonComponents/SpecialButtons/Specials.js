@@ -8,14 +8,14 @@ import { specials } from '../../../data';
 
 const Specials = () => {
   const [specialArr] = useState(specials);
-  console.log(specialArr);
+  // console.log(specialArr);
   // STEP 2 - add the imported data to state
 
   return (
     <div>
       {
        specialArr.map((item,i) => {
-         console.log(item);
+        //  console.log(item);
          return <SpecialButton key={i} spec = {item} />
        })
       }
