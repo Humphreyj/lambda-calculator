@@ -25,7 +25,7 @@ const Numbers = (props) => {
        {
          numberArr.map((num, i) => {
           //  console.log(num);
-           return <NumberButton addToTotal = {() =>props.addToTotal(num)} key = {i} num={num}/>
+           return <NumberButton addToInput = {() =>props.addToInput(num)} key = {i} num={num}/>
          })
          
        }

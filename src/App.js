@@ -1,5 +1,6 @@
 import React,{ useState } from "react";
 import "./App.css";
+import * as math from 'mathjs'
 // STEP 4 - import the button and display components
 // Don't forget to import any extra css/scss files you build into the correct component
 
@@ -10,6 +11,7 @@ import Numbers from './components/ButtonComponents/NumberButtons/Numbers';
 import Operators from './components/ButtonComponents/OperatorButtons/Operators';
 import Specials from './components/ButtonComponents/SpecialButtons/Specials';
 
+
 function App() {
   
   // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
@@ -17,19 +19,33 @@ function App() {
   // Your functions should accept a parameter of the the item data being displayed to the DOM (ie - should recieve 5 if the user clicks on
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
-  let [total,updateTotal] = useState(0);
-  const addToTotal = (num) => {
-    if(total === 0) {
-      updateTotal(total = num)
+  let [input,updateInput] = useState(0);
+  const addToInput = (num) => {
+    if(input === 0) {
+      updateInput(input = num)
     }else {
-      updateTotal(total + num);
+      updateInput(input + num);
     }
     
     console.log(num);
   }
 
   const insertOperator = (value) => {
-    updateTotal(total + value);
+    
+    console.log(value)
+    if(value === '=') {
+      handleEquals();
+    }else {
+      updateInput(input + value);
+    }
+  }
+
+  const handleEquals = ()=> {
+    updateInput(math.evaluate(input)); 
+  }
+
+  const handleClear  = (spec) => {
+    updateInput(input = 0);
   }
 
   return (
@@ -37,9 +53,9 @@ function App() {
       <Logo />
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
-        <Output total ={total} />
-        <Specials/>
-        <Numbers addToTotal = {addToTotal} />
+        <Output input ={input} />
+        <Specials handleClear={handleClear} />
+        <Numbers addToInput = {addToInput} />
         <Operators insertOperator = {insertOperator} />
         
       </div>

@@ -4,7 +4,7 @@ import './Output.css';
 const Output = (props) => {
     return (
         <div className = 'output'>
-            {props.total}
+            {props.input}
         </div>
     );
 }

@@ -6,7 +6,7 @@ import { specials } from '../../../data';
 
 //Import your array data to from the provided data file
 
-const Specials = () => {
+const Specials = (props) => {
   const [specialArr] = useState(specials);
   // console.log(specialArr);
   // STEP 2 - add the imported data to state
@@ -15,8 +15,12 @@ const Specials = () => {
     <div>
       {
        specialArr.map((item,i) => {
-        //  console.log(item);
-         return <SpecialButton key={i} spec = {item} />
+         console.log(item);
+         return <SpecialButton 
+         key={i} 
+         spec = {item} 
+         handleClear = {props.handleClear}
+         />
        })
       }
     </div>
