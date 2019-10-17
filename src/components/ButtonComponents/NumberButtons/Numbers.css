@@ -1,0 +1,12 @@
+.numbers {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.number-btn {
+    background-color: #184379;
+    font-size: 2em;
+    padding: 12% 22%;
+    
+
+}

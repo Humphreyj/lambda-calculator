@@ -41,11 +41,16 @@ function App() {
   }
 
   const handleEquals = ()=> {
-    updateInput(math.evaluate(input)); 
+    updateInput((math.evaluate(input).toFixed(3))); 
   }
 
-  const handleClear  = (spec) => {
-    updateInput(input = 0);
+  const handleSpecial  = (spec) => {
+    if(spec === "C") {
+      updateInput(input = 0);
+    }else if (spec === "%") {
+      updateInput(input / 100);
+    }
+    
   }
 
   return (
@@ -54,9 +59,17 @@ function App() {
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
         <Output input ={input} />
-        <Specials handleClear={handleClear} />
-        <Numbers addToInput = {addToInput} />
-        <Operators insertOperator = {insertOperator} />
+        <div className="buttons">
+          
+          <div className="spec-num">
+            <Specials handleSpecial={handleSpecial} />
+            <Numbers addToInput = {addToInput} />
+          </div>
+          
+          <Operators insertOperator = {insertOperator} />
+        </div>
+        {/*buttons */}
+        
         
       </div>
     </div>

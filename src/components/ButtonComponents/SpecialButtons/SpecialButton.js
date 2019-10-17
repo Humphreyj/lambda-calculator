@@ -4,7 +4,7 @@ const SpecialButton = (props) => {
   return (
     <button 
     className="btn special" 
-    onClick={props.handleClear}>{props.spec}</button>
+    onClick= {() => props.handleSpecial(props.spec)}>{props.spec}</button>
   );
 };
 

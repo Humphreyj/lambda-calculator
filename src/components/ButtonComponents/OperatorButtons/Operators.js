@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import OperatorButton from './OperatorButton';
+import './Operators.css';
 
 //import any components needed
 
@@ -12,7 +13,7 @@ const Operators = (props) => {
   const [operatorArr] = useState(operators);
   // console.log(operatorArr);
   return (
-    <div>
+    <div className = 'operators'> 
       {
         //This was a little bit of a challenge because of how the data was set up.
         operatorArr.map((obj,i) => {

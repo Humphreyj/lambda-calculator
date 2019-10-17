@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SpecialButton from './SpecialButton';
 import { specials } from '../../../data';
+import './Specials.css';
 
 //import any components needed
 
@@ -12,14 +13,14 @@ const Specials = (props) => {
   // STEP 2 - add the imported data to state
 
   return (
-    <div>
+    <div className = 'specials'>
       {
        specialArr.map((item,i) => {
-         console.log(item);
+        //  console.log(item);
          return <SpecialButton 
          key={i} 
          spec = {item} 
-         handleClear = {props.handleClear}
+         handleSpecial = {props.handleSpecial}
          />
        })
       }
