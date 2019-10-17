@@ -20,6 +20,8 @@ function App() {
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
   let [input,updateInput] = useState(0);
+
+  let [pos, setPos] = useState(true)
   const addToInput = (num) => {
     if(input === 0) {
       updateInput(input = num)
@@ -27,12 +29,12 @@ function App() {
       updateInput(input + num);
     }
     
-    console.log(num);
+    // console.log(num);
   }
 
   const insertOperator = (value) => {
     
-    console.log(value)
+    // console.log(value)
     if(value === '=') {
       handleEquals();
     }else {
@@ -44,11 +46,24 @@ function App() {
     updateInput((math.evaluate(input).toFixed(3))); 
   }
 
+  const handlePos = () => {
+    if(pos) {
+      setPos(!pos);
+    }
+  }
+
+  
+
   const handleSpecial  = (spec) => {
     if(spec === "C") {
       updateInput(input = 0);
     }else if (spec === "%") {
       updateInput(input / 100);
+    }else if(spec === '+/-') {
+      handlePos();
+      if(!pos) {
+        updateInput(- + input);
+      }
     }
     
   }
