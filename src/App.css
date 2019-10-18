@@ -53,14 +53,16 @@ body {
     box-shadow: 3px 3px 3px #111;
 }
 
-.big-btn {
-    width: 5em;
+.big {
+    width: 6.6em;
+    height: 2.8em;
+    border-radius: 45%; 
 }
 .display {
     margin-top: 25px;
     height: 200px;
     width: 70%;
-    border-radius: 40%;
+    
     color: white;
     background-color: #322c2d;
     box-shadow: 1px 1px #322c2d;
