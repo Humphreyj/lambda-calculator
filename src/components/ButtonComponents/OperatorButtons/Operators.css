@@ -1,0 +1,10 @@
+.operators {
+    display: flex;
+    flex-direction: column;
+}
+.operator-button {
+    background-color: #237293;
+    font-size: 2em;
+    padding: 12% 22%;
+
+}

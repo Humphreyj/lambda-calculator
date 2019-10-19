@@ -1,0 +1,12 @@
+.specials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.special {
+    background-color: #225D9E;
+    font-size: 2em;
+    padding: 4% 5%;
+    
+}
