@@ -1,6 +1,6 @@
 body {
     background-color: black;
-    width: 100%;
+    
 }
 .container {
     background-color: #c00025;
@@ -18,7 +18,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 85%;
+    width: 75%;
     margin: 0 auto;
     padding: 0% 3%;
 }
@@ -40,7 +40,7 @@ body {
     border: transparent;
     color: white;
     box-shadow: 2px 2px 2px #111;
-    transition: all .1s ease;
+    transition: all .05s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -129,6 +129,8 @@ body {
 
   @media(max-width: 500px) {
       .container {
+          background: none;
+          border: none;
           width: 100%;
       }
 
@@ -137,14 +139,14 @@ body {
         margin: .5em .7em;
         padding: 3% 6%;
         font-size: .5em;
-        width: 1.8em;
-        height: 1.8em;
+        width: 1.6em;
+        height: 1.6em;
         text-align: center;
     }
 
     .big {
-        width: 4.8em;
-        height: 1.8em;
+        width: 4.6em;
+        height: 1.6em;
         border-radius: 50px;
         
     }
@@ -153,8 +155,12 @@ body {
 
 @media(max-width: 400px) {
     .container {
-        width: 90%;
+        width: 80%;
         margin: 0 auto;
+    }
+
+    .buttons {
+        width: 55%;
     }
 
   .btn {
@@ -162,14 +168,14 @@ body {
       margin: .5em .7em;
       padding: 3% 6%;
       font-size: .5em;
-      width: 1.5em;
-      height: 1.5em;
+      width: 1.4em;
+      height: 1.4em;
       text-align: center;
   }
 
   .big {
-      width: 4.4em;
-      height: 1.5em;
+      width: 4.2em;
+      height: 1.4em;
       border-radius: 50px;
       
   }
